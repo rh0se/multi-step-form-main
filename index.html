@@ -19,6 +19,7 @@
 </head>
 <body>
 <main>
+  <div class="container">
   <div class="wrapper">
 
   
@@ -64,19 +65,25 @@
    
  
   <!-- Step 1 start -->
-<div class="steps active" id="step-one">
-  <h1>Personal info</h1>
-  <p>Please provide your name, email address, and phone number.</p>
+<div class="steps active step1" id="step-one">
+  <h1 class="step-heading">Personal info</h1>
+  <p class="heading-paragraph">Please provide your name, email address, and phone number.</p>
   <form action="">
+  <div>
   <label for="user-name">Name</label>
   <input id="user-name"  type="text" placeholder=" e.g. Stephen King">
+</div>
+<div>
   <label for="email">Email Address</label>
   <input id="email" type="email" placeholder="e.g. stephenking@lorem.com">
+</div>
+<div>
   <label for="phone-number">Phone Number</label>
   <input type="tel" id="phone-number" placeholder=" e.g. +1 234 567 890">
+</div>
 </form>
 
-<button type="button" class="Next">Next Step</button>
+  <button type="button" class="Next">Next Step</button>
 
 </div>
   <!-- Step 1 end -->
@@ -188,6 +195,7 @@
   <!-- Step 5 end -->
 </div>
 
+</div>
 </div>
 </main>
 

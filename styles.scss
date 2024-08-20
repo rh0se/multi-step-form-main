@@ -48,6 +48,8 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   min-height: 100vh;
+  background-color: $Magnolia;
+  
 }
 /*
     5. Improve media defaults
@@ -58,7 +60,7 @@ video,
 canvas,
 svg {
   display: block;
-  max-width: 100%;
+  /* max-width: 100%; */
 }
 /*
     6. Remove built-in form typography styles
@@ -69,6 +71,10 @@ textarea,
 select {
   font: inherit;
 }
+
+/* input, label {
+  display: block;
+} */
 /*
     7. Avoid text overflows
   */
@@ -90,23 +96,41 @@ h6 {
   isolation: isolate;
 }
 
-
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: inherit;
+  div.container {
+    border-radius: 1em;
+    width: 950px;
+    height: 625px;
+    background-color: $White;
+    padding: 1.70em 1.5em 1.5em 1.5em;
+  }
+}
 
 
 .wrapper {
-  padding: 1.5em;
+  
   display: flex;
+
 }
 
 div.sidebar {
+  font-size: 0.9em;
   color: $White;
-  width: 30%;
+  width: 41%;
+  flex-shrink: 0;
+  
+  /* flex-basis: 574.828px; */
   position: relative;
   picture {
     display: block;
-    width: 100%;
+    max-width: 100%;
+
     img {
-      width: 100%;
+      max-width: 100%;
     }
    
   }
@@ -114,14 +138,14 @@ div.sidebar {
     position: absolute;
     top: 0;
     left: 0;
-    margin: 3.5em 0 0 2.5em;
+    margin: 2.5em 0 0 2.5em;
     div.sidebar-wrapper {
       width: 170px;
       display: flex;
       justify-content: flex-start;
       align-items: center;
       gap: 1em;
-      margin: 0 0 50px 0;
+      margin: 0 0 30px 0;
       p.number {
         display: flex;
         justify-content: center;
@@ -160,9 +184,70 @@ div.sidebar {
   background-repeat: no-repeat; */
 }
 
+/* 
+.steps {
+  margin-left: 6em;
+} */
+
 
 .active {
   display: block;
+}
+
+h1.step-heading {
+  margin-top: 0.7em;
+  font-size: 2.5em;
+}
+p.heading-paragraph {
+  color: $CoolGray;
+  font-weight: 500;
+}
+
+button.Next {
+  border: none;
+  background-color: $MarineBlue;
+  color: $LightGray;
+  font-family: inherit;
+  text-align: center;
+  width: 105px;
+  padding: 0.5em 0;
+  margin: 6.5em 0 0 22em;
+  border-radius: 5px;
+}
+
+div.step1 {
+  form {
+    margin-top: 2.5em;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2em;
+      margin-bottom: 1em;
+      label {
+        font-weight: 500;
+      }
+      input {
+        color: inherit;
+        font-weight: 700;
+        border-radius: 7px;
+        border: 1px $LightGray solid;
+        padding: 0.5em 0.5em;
+
+      }
+      input:focus {
+        outline: 2px solid $MarineBlue;
+
+      }
+      input::placeholder {
+        color: $CoolGray;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+div.main-content {
+  color: $MarineBlue;
 }
 
 
