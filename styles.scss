@@ -443,13 +443,34 @@ div.success-container {
       background-color: $Magnolia;
       padding: 0 ;
       width: 100%;
-      min-height: 100vh;
+    /*   min-height: 100vh; */
     }
   }
+
+  h1.step-heading {
+    margin-top: 1.1em;
+    font-size: 1.5em;
+  }
+
+  p.heading-paragraph {
+    margin-top: 1px;
+  }
+
+   div.nav-buttons  {
+    margin: 0;
+    padding: 1em;
+    position: absolute;
+    top: 670px;
+    display: flex;
+    background-color: $White;
+    width: 100%;
+   }
+  
 
  
 
   div.steps-content {
+    padding: 0 1.1em 1.1em;
     border-radius: 10px;
     margin: 0 4%;
     width: 92%;
@@ -493,7 +514,64 @@ div.success-container {
     }
   }
 
-  
+  div.step-2 {
+    div.steps-content {
+      div.user-plans {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 80px);
+        article.plans {
+          padding: 1em;
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          img {
+            height: 40px;
+            width: 40px;
+          }
+          h2.plan-heading {
+            margin-top: 0;
+          }
+          p {
+            color: $CoolGray;
+            font-size: 0.9em;
+            font-weight: 500;
+          }
+        }
+        
+      }
+    }
+    div.plan-frequency {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  div.step-three {
+    div.steps-content {
+      div.add-on-container {
+        article {
+          width: 100%;
+          padding: 0.6em 1em;
+          gap: 8%;
+        }
+        div {
+          line-height: 1.2;
+          width: min(261, 60%);
+          
+          p {
+            font-size: 0.8em;
+            color: $CoolGray;
+          }
+        }
+        p.add-on-pricing {
+          justify-self: flex-end;
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+
+
 
   div.success-container {
     padding: 4em 0;
