@@ -220,33 +220,33 @@ button.back-button {
   text-transform: capitalize;
 }
 
-div.step1 form {
+div.step1 div.steps-content form {
   margin-top: 2.5em;
 }
-div.step1 form div {
+div.step1 div.steps-content form div {
   display: flex;
   flex-direction: column;
   gap: 0.2em;
   margin-bottom: 1em;
 }
-div.step1 form div label {
+div.step1 div.steps-content form div label {
   font-weight: 500;
 }
-div.step1 form div input {
+div.step1 div.steps-content form div input {
   color: inherit;
   font-weight: 700;
   border-radius: 7px;
   border: 1px hsl(229, 24%, 87%) solid;
   padding: 0.5em 0.5em;
 }
-div.step1 form div input:focus {
+div.step1 div.steps-content form div input:focus {
   outline: 2px solid hsl(213, 96%, 18%);
 }
-div.step1 form div input::-moz-placeholder {
+div.step1 div.steps-content form div input::-moz-placeholder {
   color: hsl(231, 11%, 63%);
   font-weight: 500;
 }
-div.step1 form div input::placeholder {
+div.step1 div.steps-content form div input::placeholder {
   color: hsl(231, 11%, 63%);
   font-weight: 500;
 }
@@ -258,28 +258,28 @@ div.main-content {
   color: hsl(213, 96%, 18%);
 }
 
-div.step-2 div.user-plans {
+div.step-2 div.steps-content div.user-plans {
   margin-top: 2.5em;
   display: grid;
   grid-template-columns: repeat(3, 140px);
   gap: 1em;
 }
-div.step-2 div.user-plans article.plans {
+div.step-2 div.steps-content div.user-plans article.plans {
   border-radius: 5px;
   /* width: 150px; */
   padding: 1.5em 1em 1.1em;
   border: 1px solid hsl(229, 24%, 87%);
   line-height: 1.2;
 }
-div.step-2 div.user-plans article.plans h2.plan-heading {
+div.step-2 div.steps-content div.user-plans article.plans h2.plan-heading {
   margin-top: 2.5em;
 }
-div.step-2 div.user-plans article.plans p {
+div.step-2 div.steps-content div.user-plans article.plans p {
   color: hsl(231, 11%, 63%);
   font-size: 0.9em;
   font-weight: 500;
 }
-div.step-2 div.plan-frequency {
+div.step-2 div.steps-content div.plan-frequency {
   border-radius: 5px;
   margin-top: 2em;
   background-color: hsl(217, 100%, 97%);
@@ -296,14 +296,14 @@ div.step-2 div.plan-frequency {
     width: 100px;
   } */
 }
-div.step-2 div.plan-frequency span.active {
+div.step-2 div.steps-content div.plan-frequency span.active {
   color: hsl(213, 96%, 18%);
 }
 
-div.step-three div.add-on-container {
+div.step-three div.steps-content div.add-on-container {
   margin-top: 2.5em;
 }
-div.step-three div.add-on-container article {
+div.step-three div.steps-content div.add-on-container article {
   border: 1px solid hsl(229, 24%, 87%);
   padding: 1em 1.5em;
   border-radius: 10px;
@@ -313,7 +313,7 @@ div.step-three div.add-on-container article {
   align-items: center;
   gap: 40px;
 }
-div.step-three div.add-on-container article .checkbox-container {
+div.step-three div.steps-content div.add-on-container article .checkbox-container {
   display: block;
   position: relative;
   width: 16px;
@@ -328,7 +328,7 @@ div.step-three div.add-on-container article .checkbox-container {
     }
   } */
 }
-div.step-three div.add-on-container article .checkbox-container .checkmark {
+div.step-three div.steps-content div.add-on-container article .checkbox-container .checkmark {
   outline: 1px solid black;
   display: flex;
   border-radius: 2px;
@@ -341,10 +341,10 @@ div.step-three div.add-on-container article .checkbox-container .checkmark {
   height: 16px;
   width: 16px;
 }
-div.step-three div.add-on-container article .checkbox-container .checkmark img {
+div.step-three div.steps-content div.add-on-container article .checkbox-container .checkmark img {
   display: none;
 }
-div.step-three div.add-on-container article .checkbox-container input {
+div.step-three div.steps-content div.add-on-container article .checkbox-container input {
   top: 0;
   left: 0;
   position: absolute;
@@ -353,23 +353,23 @@ div.step-three div.add-on-container article .checkbox-container input {
   height: 16px;
   width: 16px;
 }
-div.step-three div.add-on-container article .checkbox-container input:checked ~ .checkmark {
+div.step-three div.steps-content div.add-on-container article .checkbox-container input:checked ~ .checkmark {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: hsl(243, 100%, 62%);
   outline: none;
 }
-div.step-three div.add-on-container article .checkbox-container input:checked ~ .checkmark img {
+div.step-three div.steps-content div.add-on-container article .checkbox-container input:checked ~ .checkmark img {
   display: block;
 }
-div.step-three div.add-on-container article div {
+div.step-three div.steps-content div.add-on-container article div {
   width: 300px;
 }
-div.step-three div.add-on-container article div p {
+div.step-three div.steps-content div.add-on-container article div p {
   color: hsl(231, 11%, 63%);
 }
-div.step-three div.add-on-container p.add-on-pricing {
+div.step-three div.steps-content div.add-on-container p.add-on-pricing {
   color: hsl(243, 100%, 62%);
   font-weight: 700;
 }
@@ -385,6 +385,78 @@ div.step-four p.total {
   color: hsl(231, 11%, 63%);
 }
 
+div.success-container {
+  display: flex;
+  height: 100%;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div.success-container p.thanks-message {
+  max-width: 452px;
+  color: hsl(231, 11%, 63%);
+  margin-top: 1em;
+  font-weight: 500;
+}
+
+@media screen and (width < 768px) {
+  main {
+    background-color: inherit;
+    display: block;
+  }
+  main div.container {
+    position: relative;
+    border-radius: none;
+    background-color: hsl(217, 100%, 97%);
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+  }
+  div.steps-content {
+    border-radius: 10px;
+    margin: 0 4%;
+    width: 92%;
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    top: 98px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  /*  div.steps {
+     height: 500;
+     width: 80%;
+   } */
+  div.wrapper {
+    display: block;
+  }
+  div.sidebar {
+    width: 100%;
+    height: 172px;
+  }
+  div.sidebar picture img {
+    width: 100%;
+  }
+  div.sidebar div.sidebar-content {
+    margin: 2em 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  div.sidebar div.sidebar-content div.sidebar-wrapper {
+    width: 50px;
+  }
+  div.sidebar div.sidebar-content div.sidebar-wrapper div {
+    display: none;
+  }
+  div.success-container {
+    padding: 4em 0;
+  }
+  div.success-container p.thanks-message {
+    width: 305px;
+  }
+}
 .inactive {
   display: none;
 }/*# sourceMappingURL=styles.css.map */

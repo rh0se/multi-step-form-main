@@ -38,7 +38,7 @@
         <div class="sidebar">
           <picture>
             <source media="(min-width:768px)" srcset="assets\images\bg-sidebar-desktop.svg">
-            <source media="(min-width:465px)" srcset="assets\images\bg-sidebar-mobile.svg">
+            <source media="(max-width:768px)" srcset="assets\images\bg-sidebar-mobile.svg">
             <img src="assets\images\bg-sidebar-desktop.svg" alt="background picture">
           </picture>
           <div class="sidebar-content">
@@ -77,6 +77,8 @@
 
           <!-- Step 1 start -->
           <div class="steps inactive step1" id="step-one">
+
+            <div class="steps-content">
             <h1 class="step-heading">Personal info</h1>
             <p class="heading-paragraph">Please provide your name, email address, and phone number.</p>
             <form action="">
@@ -93,7 +95,7 @@
                 <input type="tel" id="phone-number" placeholder=" e.g. +1 234 567 890">
               </div>
             </form>
-
+          </div>
             <button type="button" class="next-step">Next Step</button>
 
           </div>
@@ -101,6 +103,8 @@
 
           <!-- Step 2 start -->
           <div class="steps inactive step-2" id="step-2">
+
+            <div class="steps-content">
             <h1 class="step-heading">Select your plan</h1>
             <p class="heading-paragraph">You have the option of monthly or yearly billing.</p>
             <div class="user-plans">
@@ -130,6 +134,7 @@
                 id="frequency-toggle"></i>
               <span>yearly</span>
             </div>
+          </div>
             <div class="nav-buttons">
               <button class="back-button">Go back</button>
               <button class="next-step">Next Step</button>
@@ -140,6 +145,7 @@
 
           <!-- Step 3 start -->
           <div class="steps inactive step-three" id="step-3">
+            <div class="steps-content">
             <h1 class="step-heading">Pick add-ons</h1>
             <p class="heading-paragraph">Add-ons help enhance your gaming experience.</p>
             <div class="add-on-container">
@@ -174,6 +180,7 @@
                 <p class="add-on-pricing">+$2/mo</p>
               </article>
             </div>
+          </div>
             <div class="nav-buttons">
               <button class="back-button">Go back</button>
               <button class="next-step">Next Step</button>
@@ -184,13 +191,15 @@
           <!-- Step 3 end -->
 
           <!-- Step 4 start -->
-          <div class="steps inactive step-four" id="step-4">
+          <div class="steps active step-four" id="step-4">
+            <div class="steps-content">
             <h1 class="step-heading"> Finishing up</h1>
             <p class="heading-paragraph">Double-check everything looks OK before confirming.</p>
             <div class="selected-plans" id="summary">
               <!-- Dynamically add subscription and add-on selections here -->
             </div>
             <p class="total">Total (per <span id="selected-frequency">month</span>) <span class="total-amount"></span></p>
+          </div>
             <div class="nav-buttons">
               <button class="back-button">Go back</button>
               <button class="next-step">Next Step</button>
@@ -200,15 +209,16 @@
           <!-- Step 4 end -->
 
           <!-- Step 5 start -->
-          <div class="success-container active">
+          <div class=" inactive">
+            <div class="steps-content success-container">
             <img src="./assets/images/icon-thank-you.svg" alt="Thanks-img">
-            <h1>Thank you!</h1>
+            <h1 class="step-heading">Thank you!</h1>
             <p class="thanks-message">
               Thanks for confirming your subscription! We hope you have fun
               using our platform. If you ever need support, please feel free
               to email us at support@loremgaming.com.
             </p>
-
+          </div>
           </div>
 
 
