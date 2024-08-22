@@ -186,7 +186,7 @@ p.heading-paragraph {
   font-weight: 500;
 }
 
-button.Next {
+button.next-step {
   border: none;
   background-color: hsl(213, 96%, 18%);
   color: hsl(229, 24%, 87%);
@@ -194,8 +194,30 @@ button.Next {
   text-align: center;
   width: 105px;
   padding: 0.5em 0;
-  margin: 6.5em 0 0 22em;
   border-radius: 5px;
+}
+
+div.nav-buttons {
+  display: flex;
+  margin-top: 7.5em;
+  justify-content: space-between;
+  align-items: center;
+}
+div.nav-buttons button.back-button {
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(231, 11%, 63%);
+  text-transform: capitalize;
+}
+div.nav-buttons button.next-button {
+  margin: 0 0 0;
+}
+
+button.back-button {
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(231, 11%, 63%);
+  text-transform: capitalize;
 }
 
 div.step1 form {
@@ -228,9 +250,139 @@ div.step1 form div input::placeholder {
   color: hsl(231, 11%, 63%);
   font-weight: 500;
 }
+div.step1 button.next-step {
+  margin: 6.5em 0 0 22em;
+}
 
 div.main-content {
   color: hsl(213, 96%, 18%);
+}
+
+div.step-2 div.user-plans {
+  margin-top: 2.5em;
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  gap: 1em;
+}
+div.step-2 div.user-plans article.plans {
+  border-radius: 5px;
+  /* width: 150px; */
+  padding: 1.5em 1em 1.1em;
+  border: 1px solid hsl(229, 24%, 87%);
+  line-height: 1.2;
+}
+div.step-2 div.user-plans article.plans h2.plan-heading {
+  margin-top: 2.5em;
+}
+div.step-2 div.user-plans article.plans p {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.9em;
+  font-weight: 500;
+}
+div.step-2 div.plan-frequency {
+  border-radius: 5px;
+  margin-top: 2em;
+  background-color: hsl(217, 100%, 97%);
+  max-width: 452px;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7em 0;
+  color: hsl(229, 24%, 87%);
+  font-weight: 700;
+  text-transform: capitalize;
+  /* img {
+    width: 100px;
+  } */
+}
+div.step-2 div.plan-frequency span.active {
+  color: hsl(213, 96%, 18%);
+}
+
+div.step-three div.add-on-container {
+  margin-top: 2.5em;
+}
+div.step-three div.add-on-container article {
+  border: 1px solid hsl(229, 24%, 87%);
+  padding: 1em 1.5em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+  width: 452px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+div.step-three div.add-on-container article .checkbox-container {
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  /*  padding-left: 35px;
+  margin-bottom: 12px; */
+  cursor: pointer;
+  background-color: hsl(0, 0%, 100%);
+  /* input:checked {
+    span.checkmark {
+
+    }
+  } */
+}
+div.step-three div.add-on-container article .checkbox-container .checkmark {
+  outline: 1px solid black;
+  display: flex;
+  border-radius: 2px;
+  padding: 3px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+}
+div.step-three div.add-on-container article .checkbox-container .checkmark img {
+  display: none;
+}
+div.step-three div.add-on-container article .checkbox-container input {
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+}
+div.step-three div.add-on-container article .checkbox-container input:checked ~ .checkmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(243, 100%, 62%);
+  outline: none;
+}
+div.step-three div.add-on-container article .checkbox-container input:checked ~ .checkmark img {
+  display: block;
+}
+div.step-three div.add-on-container article div {
+  width: 300px;
+}
+div.step-three div.add-on-container article div p {
+  color: hsl(231, 11%, 63%);
+}
+div.step-three div.add-on-container p.add-on-pricing {
+  color: hsl(243, 100%, 62%);
+  font-weight: 700;
+}
+div.step-three div.nav-buttons {
+  margin-top: 5.5em;
+}
+
+div.step-four div.selected-plans {
+  background-color: hsl(217, 100%, 97%);
+}
+div.step-four p.total {
+  margin-top: 2em;
+  color: hsl(231, 11%, 63%);
 }
 
 .inactive {

@@ -49,7 +49,6 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   background-color: $Magnolia;
-  
 }
 /*
     5. Improve media defaults
@@ -106,15 +105,12 @@ main {
     width: 950px;
     height: 625px;
     background-color: $White;
-    padding: 1.70em 1.5em 1.5em 1.5em;
+    padding: 1.7em 1.5em 1.5em 1.5em;
   }
 }
 
-
 .wrapper {
-  
   display: flex;
-
 }
 
 div.sidebar {
@@ -122,7 +118,7 @@ div.sidebar {
   color: $White;
   width: 41%;
   flex-shrink: 0;
-  
+
   /* flex-basis: 574.828px; */
   position: relative;
   picture {
@@ -132,7 +128,6 @@ div.sidebar {
     img {
       max-width: 100%;
     }
-   
   }
   div.sidebar-content {
     position: absolute;
@@ -155,7 +150,7 @@ div.sidebar {
         height: 37px;
         font-weight: 700;
         text-align: center;
-        border: 1px solid $White
+        border: 1px solid $White;
       }
       p.active {
         background-color: $LightBlue;
@@ -173,7 +168,6 @@ div.sidebar {
           color: $LightGray;
         }
         span.step-title {
-          
           font-weight: 700;
         }
       }
@@ -189,7 +183,6 @@ div.sidebar {
   margin-left: 6em;
 } */
 
-
 .active {
   display: block;
 }
@@ -203,7 +196,7 @@ p.heading-paragraph {
   font-weight: 500;
 }
 
-button.Next {
+button.next-step {
   border: none;
   background-color: $MarineBlue;
   color: $LightGray;
@@ -211,8 +204,30 @@ button.Next {
   text-align: center;
   width: 105px;
   padding: 0.5em 0;
-  margin: 6.5em 0 0 22em;
   border-radius: 5px;
+}
+
+div.nav-buttons {
+  display: flex;
+  margin-top: 7.5em;
+  justify-content: space-between;
+  align-items: center;
+  button.back-button {
+    border: none;
+    background-color: $White;
+    color: $CoolGray;
+    text-transform: capitalize;
+  }
+  button.next-button {
+    margin: 0 0 0;
+  }
+}
+
+button.back-button {
+  border: none;
+  background-color: $White;
+  color: $CoolGray;
+  text-transform: capitalize;
 }
 
 div.step1 {
@@ -232,11 +247,9 @@ div.step1 {
         border-radius: 7px;
         border: 1px $LightGray solid;
         padding: 0.5em 0.5em;
-
       }
       input:focus {
         outline: 2px solid $MarineBlue;
-
       }
       input::placeholder {
         color: $CoolGray;
@@ -244,12 +257,163 @@ div.step1 {
       }
     }
   }
+  button.next-step {
+    margin: 6.5em 0 0 22em;
+  }
 }
 
 div.main-content {
   color: $MarineBlue;
 }
 
+div.step-2 {
+  div.user-plans {
+    margin-top: 2.5em;
+    display: grid;
+
+    grid-template-columns: repeat(3, 140px);
+    gap: 1em;
+    article.plans {
+      border-radius: 5px;
+      /* width: 150px; */
+      padding: 1.5em 1em 1.1em;
+      border: 1px solid $LightGray;
+      line-height: 1.2;
+      h2.plan-heading {
+        margin-top: 2.5em;
+      }
+      p {
+        color: $CoolGray;
+        font-size: 0.9em;
+        font-weight: 500;
+      }
+    }
+  }
+  div.plan-frequency {
+    border-radius: 5px;
+    margin-top: 2em;
+    background-color: $Magnolia;
+    max-width: 452px;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7em 0;
+    color: $LightGray;
+    font-weight: 700;
+    text-transform: capitalize;
+    /* img {
+      width: 100px;
+    } */
+    span.active {
+      color: $MarineBlue;
+    }
+  }
+}
+
+div.step-three {
+  div.add-on-container {
+    margin-top: 2.5em;
+    article {
+      border: 1px solid $LightGray;
+      padding: 1em 1.5em;
+      border-radius: 10px;
+      margin-bottom: 1em;
+      width: 452px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      .checkbox-container {
+        display: block;
+        position: relative;
+        width: 16px;
+        height: 16px;
+        
+        /*  padding-left: 35px;
+  margin-bottom: 12px; */
+       
+        cursor: pointer;
+        background-color: $White;
+        
+
+        .checkmark {
+          outline: 1px solid black;
+          display: flex;
+          border-radius: 2px;
+          padding: 3px;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 16px;
+          width: 16px;
+          
+          img {
+            display: none;
+          }
+        }
+
+        input {
+          top: 0;
+          left: 0;
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 16px;
+          width: 16px;
+          
+        }
+
+        input:checked ~ .checkmark {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $PurplishBlue;
+          outline: none;
+          img {
+            display: block;
+          }
+        }
+
+        /* input:checked {
+          span.checkmark {
+            
+          }
+        } */
+      }
+  
+     
+      div {
+        width: 300px;
+        p {
+          color: $CoolGray;
+        }
+      }
+    }
+    p.add-on-pricing {
+      color: $PurplishBlue;
+      font-weight: 700;
+    }
+  }
+  div.nav-buttons {
+    margin-top: 5.5em;
+  }
+}
+
+div.step-four {
+  div.selected-plans {
+    background-color: $Magnolia;
+  }
+  p.total {
+    margin-top: 2em;
+    color: $CoolGray;
+  }
+}
+
+div.success-container {
+  
+}
 
 .inactive {
   display: none;
