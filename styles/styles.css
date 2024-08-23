@@ -401,17 +401,24 @@ div.success-container p.thanks-message {
 }
 
 @media screen and (width < 768px) {
+  body {
+    background-color: hsl(0, 0%, 100%);
+  }
   main {
+    border-radius: 0;
     background-color: inherit;
     display: block;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 100%);
   }
   main div.container {
     position: relative;
-    border-radius: none;
+    border-radius: 0;
     background-color: hsl(217, 100%, 97%);
-    padding: 0;
+    padding: 0 0 2em;
     width: 100%;
-    /*   min-height: 100vh; */
+    min-height: 100vh;
+    height: 632px;
   }
   h1.step-heading {
     margin-top: 1.1em;
@@ -422,9 +429,9 @@ div.success-container p.thanks-message {
   }
   div.nav-buttons {
     margin: 0;
-    padding: 1em;
+    padding: 0 1em 1em;
     position: absolute;
-    top: 670px;
+    top: 650px;
     display: flex;
     background-color: hsl(0, 0%, 100%);
     width: 100%;
@@ -432,11 +439,11 @@ div.success-container p.thanks-message {
   div.steps-content {
     padding: 0 1.1em 1.1em;
     border-radius: 10px;
-    margin: 0 4%;
+    margin: 0 4% 1em;
     width: 92%;
     background-color: hsl(0, 0%, 100%);
     position: absolute;
-    top: 98px;
+    top: 99px;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -445,7 +452,9 @@ div.success-container p.thanks-message {
      width: 80%;
    } */
   div.wrapper {
+    border-radius: none;
     display: block;
+    padding: 0 0 2em;
   }
   div.sidebar {
     width: 100%;
@@ -466,6 +475,21 @@ div.success-container p.thanks-message {
   }
   div.sidebar div.sidebar-content div.sidebar-wrapper div {
     display: none;
+  }
+  div.step1 div.next-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 0 0 10px;
+    top: 685px;
+  }
+  div.step1 button.next-step {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    margin: 0;
+    margin-top: 0.7em;
+    margin-left: auto;
+    margin-bottom: 0.7em;
   }
   div.step-2 div.steps-content div.user-plans {
     grid-template-columns: 1fr;
@@ -509,6 +533,9 @@ div.success-container p.thanks-message {
   div.step-three div.steps-content div.add-on-container p.add-on-pricing {
     justify-self: flex-end;
     font-size: 0.8em;
+  }
+  div.step-three div.nav-buttons {
+    margin: 0;
   }
   div.success-container {
     padding: 4em 0;

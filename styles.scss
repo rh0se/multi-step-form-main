@@ -434,16 +434,23 @@ div.success-container {
   }
 }
 @media screen and (width < 768px) {
+  body {
+    background-color: $White;
+  }
   main {
+    border-radius: 0;
     background-color: inherit;
     display: block;
+    min-height: 100vh;
+    background-color: $White;
     div.container {
       position: relative;
-      border-radius: none;
+      border-radius: 0;
       background-color: $Magnolia;
-      padding: 0 ;
+      padding: 0 0 2em;
       width: 100%;
-    /*   min-height: 100vh; */
+     min-height: 100vh; 
+     height: 632px;
     }
   }
 
@@ -458,9 +465,9 @@ div.success-container {
 
    div.nav-buttons  {
     margin: 0;
-    padding: 1em;
+    padding: 0 1em 1em;
     position: absolute;
-    top: 670px;
+    top: 650px;
     display: flex;
     background-color: $White;
     width: 100%;
@@ -472,11 +479,11 @@ div.success-container {
   div.steps-content {
     padding: 0 1.1em 1.1em;
     border-radius: 10px;
-    margin: 0 4%;
+    margin: 0 4% 1em;
     width: 92%;
     background-color: $White;
     position: absolute;
-    top: 98px;
+    top: 99px;
     height: fit-content;
   }
 
@@ -487,8 +494,10 @@ div.success-container {
   } */
   
   div.wrapper {
-    display: block;
+    border-radius: none;
     
+    display: block;
+    padding: 0 0 2em;
   }
   div.sidebar {
     width: 100%;
@@ -511,6 +520,31 @@ div.success-container {
           display: none;
         }
       }
+    }
+  }
+  button.next-step {
+
+  }
+
+  div.step1 {
+    div.steps-content {
+
+       
+    }
+    div.next-wrapper {
+      width: 100%;
+      position: absolute;
+      padding: 0 0 10px;
+      top: 685px
+    }
+    button.next-step {
+        position: absolute;
+        bottom: 0;
+        right: 5%;
+        margin: 0;
+        margin-top: 0.7em;
+        margin-left: auto;
+        margin-bottom: 0.7em;
     }
   }
 
@@ -568,6 +602,9 @@ div.success-container {
           font-size: 0.8em;
         }
       }
+    }
+    div.nav-buttons {
+      margin: 0;
     }
   }
 
