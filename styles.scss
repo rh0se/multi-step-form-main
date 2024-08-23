@@ -69,6 +69,7 @@ button,
 textarea,
 select {
   font: inherit;
+  cursor: pointer;
 }
 
 /* input, label {
@@ -419,9 +420,11 @@ div.step-four {
   }
 }
 
+
+
 div.success-container {
   display: flex;
-  height: 100%;
+  height: 568px;
   text-align: center;
   flex-direction: column;
   justify-content: center;
