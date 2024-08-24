@@ -268,8 +268,12 @@ div.step1 {
 
 .selected {
   background-color: $Magnolia !important;
-  border: 1px solid $MarineBlue !important;
+  border: 1px solid $PurplishBlue !important;
 }
+button.plans:hover {
+  border: 1px solid $PurplishBlue !important;
+}
+
 
 div.main-content {
   color: $MarineBlue;
@@ -331,14 +335,18 @@ div.step-2 {
 
 article.checked {
   background-color: $Magnolia !important;
-  border: 1.5px solid $MarineBlue !important;
+  border: 1.5px solid $PurplishBlue !important;
 }
+
+
 
 div.step-three {
  div.steps-content {
   div.add-on-container {
     margin-top: 2.5em;
-    
+    article:hover {
+      border: 1.5px solid $PurplishBlue !important;
+    }
     article {
       border: 1px solid $LightGray;
       padding: 1em 1.5em;
@@ -434,34 +442,47 @@ div.step-four {
     width: 452px;
     background-color: $Magnolia;
     border-radius: 10px;
-    
-    div:not(.chosen-container) {
-      margin-top: 1em;
-      color: $CoolGray;
-      display: flex;
-      align-items: center;
-      gap: 59%;
-      p.summary-price {
-        color: $MarineBlue;
+    div#summary-addons{
+      div:not(.chosen-container) {
+        margin-top: 1em;
+        color: $CoolGray;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       /*  gap: 54.5% */;
+        font-size: 0.8em;
+        font-weight: 700;
+        p:not(.summary-price) {
+          width: 128px;
+        }
+        p.summary-price {
+          color: $MarineBlue;
+        }
       }
     }
+    
     div.chosen-container {
       display: flex;
-      gap: 59%;
+      justify-content: space-between;
+      /* gap: 55%; */
       align-items: center;
       border-bottom: 1px solid $LightGray;
+      font-weight: 700;
       p.summary-price {
         color: $MarineBlue;
+       
       }
-      div {
+      div.chosen-wrapper {
+        width: 120;
         margin: 0;
         color: $MarineBlue;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        
+        gap: 1px;
         padding-bottom: 1em;
         button.change-button {
+          font-size: 0.75em;
           display: block;
           border: none;
           text-decoration: underline;
@@ -476,9 +497,17 @@ div.step-four {
   p.summary-price {
     justify-self: flex-end;
   }
-  p.total {
+  div.total {
+    display: flex;
+    justify-content: space-between;
     margin-top: 2em;
+    font-size: 0.9;
     color: $CoolGray;
+    p#total-amount {
+      color: $PurplishBlue;
+      font-size: 1.2em;
+      font-weight: 700;
+    }
   }
 }
 
@@ -516,6 +545,8 @@ div.success-container {
       overflow: auto;
       padding: 0 0 2em;
       width: 100%;
+      z-index: 1;
+      min-height: 100vh;
      /* s */
       background-color: $Magnolia;
     }
@@ -695,7 +726,7 @@ div.success-container {
       width: 99%;
       
       div.chosen-container {
-        gap: 15px;
+        /* gap: 15px; */
         div {
           
           padding-bottom: 1em;
@@ -707,7 +738,7 @@ div.success-container {
         
       }
       div:not(.chosen-container) {
-        gap: 15px;
+        /* gap: 15px; */
         p.summary-price {
           
         }

@@ -257,7 +257,11 @@ div.step1 button.next-step {
 
 .selected {
   background-color: hsl(217, 100%, 97%) !important;
-  border: 1px solid hsl(213, 96%, 18%) !important;
+  border: 1px solid hsl(243, 100%, 62%) !important;
+}
+
+button.plans:hover {
+  border: 1px solid hsl(243, 100%, 62%) !important;
 }
 
 div.main-content {
@@ -312,11 +316,14 @@ div.step-2 div.steps-content div.plan-frequency span.active {
 
 article.checked {
   background-color: hsl(217, 100%, 97%) !important;
-  border: 1.5px solid hsl(213, 96%, 18%) !important;
+  border: 1.5px solid hsl(243, 100%, 62%) !important;
 }
 
 div.step-three div.steps-content div.add-on-container {
   margin-top: 2.5em;
+}
+div.step-three div.steps-content div.add-on-container article:hover {
+  border: 1.5px solid hsl(243, 100%, 62%) !important;
 }
 div.step-three div.steps-content div.add-on-container article {
   border: 1px solid hsl(229, 24%, 87%);
@@ -399,34 +406,45 @@ div.step-four div.selected-plans {
   background-color: hsl(217, 100%, 97%);
   border-radius: 10px;
 }
-div.step-four div.selected-plans div:not(.chosen-container) {
+div.step-four div.selected-plans div#summary-addons div:not(.chosen-container) {
   margin-top: 1em;
   color: hsl(231, 11%, 63%);
   display: flex;
   align-items: center;
-  gap: 59%;
+  justify-content: space-between;
+  /*  gap: 54.5% */
+  font-size: 0.8em;
+  font-weight: 700;
 }
-div.step-four div.selected-plans div:not(.chosen-container) p.summary-price {
+div.step-four div.selected-plans div#summary-addons div:not(.chosen-container) p:not(.summary-price) {
+  width: 128px;
+}
+div.step-four div.selected-plans div#summary-addons div:not(.chosen-container) p.summary-price {
   color: hsl(213, 96%, 18%);
 }
 div.step-four div.selected-plans div.chosen-container {
   display: flex;
-  gap: 59%;
+  justify-content: space-between;
+  /* gap: 55%; */
   align-items: center;
   border-bottom: 1px solid hsl(229, 24%, 87%);
+  font-weight: 700;
 }
 div.step-four div.selected-plans div.chosen-container p.summary-price {
   color: hsl(213, 96%, 18%);
 }
-div.step-four div.selected-plans div.chosen-container div {
+div.step-four div.selected-plans div.chosen-container div.chosen-wrapper {
+  width: 120;
   margin: 0;
   color: hsl(213, 96%, 18%);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 1px;
   padding-bottom: 1em;
 }
-div.step-four div.selected-plans div.chosen-container div button.change-button {
+div.step-four div.selected-plans div.chosen-container div.chosen-wrapper button.change-button {
+  font-size: 0.75em;
   display: block;
   border: none;
   text-decoration: underline;
@@ -436,9 +454,17 @@ div.step-four div.selected-plans div.chosen-container div button.change-button {
 div.step-four p.summary-price {
   justify-self: flex-end;
 }
-div.step-four p.total {
+div.step-four div.total {
+  display: flex;
+  justify-content: space-between;
   margin-top: 2em;
+  font-size: 0.9;
   color: hsl(231, 11%, 63%);
+}
+div.step-four div.total p#total-amount {
+  color: hsl(243, 100%, 62%);
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
 div.success-container {
@@ -473,6 +499,8 @@ div.success-container p.thanks-message {
     overflow: auto;
     padding: 0 0 2em;
     width: 100%;
+    z-index: 1;
+    min-height: 100vh;
     /* s */
     background-color: hsl(217, 100%, 97%);
   }
@@ -612,13 +640,13 @@ div.success-container p.thanks-message {
     width: 99%;
   }
   div.step-four div.selected-plans div.chosen-container {
-    gap: 15px;
+    /* gap: 15px; */
   }
   div.step-four div.selected-plans div.chosen-container div {
     padding-bottom: 1em;
   }
   div.step-four div.selected-plans div:not(.chosen-container) {
-    gap: 15px;
+    /* gap: 15px; */
   }
   div.success-container {
     padding: 4em 0;
