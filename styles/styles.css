@@ -393,10 +393,48 @@ div.step-three div.nav-buttons {
 }
 
 div.step-four div.selected-plans {
+  margin-top: 2em;
+  padding: 1em;
+  width: 452px;
   background-color: hsl(217, 100%, 97%);
+  border-radius: 10px;
+}
+div.step-four div.selected-plans div:not(.chosen-container) {
+  margin-top: 1em;
+  color: hsl(231, 11%, 63%);
+  display: flex;
+  align-items: center;
+  gap: 59%;
+}
+div.step-four div.selected-plans div:not(.chosen-container) p.summary-price {
+  color: hsl(213, 96%, 18%);
 }
 div.step-four div.selected-plans div.chosen-container {
   display: flex;
+  gap: 59%;
+  align-items: center;
+  border-bottom: 1px solid hsl(229, 24%, 87%);
+}
+div.step-four div.selected-plans div.chosen-container p.summary-price {
+  color: hsl(213, 96%, 18%);
+}
+div.step-four div.selected-plans div.chosen-container div {
+  margin: 0;
+  color: hsl(213, 96%, 18%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 1em;
+}
+div.step-four div.selected-plans div.chosen-container div button.change-button {
+  display: block;
+  border: none;
+  text-decoration: underline;
+  background-color: hsl(217, 100%, 97%);
+  color: hsl(231, 11%, 63%);
+}
+div.step-four p.summary-price {
+  justify-self: flex-end;
 }
 div.step-four p.total {
   margin-top: 2em;
@@ -420,7 +458,7 @@ div.success-container p.thanks-message {
 
 @media screen and (width < 768px) {
   body {
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(217, 100%, 97%);
   }
   main {
     border-radius: 0;
@@ -432,11 +470,11 @@ div.success-container p.thanks-message {
   main div.container {
     position: relative;
     border-radius: 0;
-    background-color: hsl(217, 100%, 97%);
+    overflow: auto;
     padding: 0 0 2em;
     width: 100%;
-    min-height: 100vh;
-    height: 632px;
+    /* s */
+    background-color: hsl(217, 100%, 97%);
   }
   h1.step-heading {
     margin-top: 1.1em;
@@ -446,13 +484,14 @@ div.success-container p.thanks-message {
     margin-top: 1px;
   }
   div.nav-buttons {
-    margin: 0;
+    /*  margin: 0;
     padding: 0 1em 1em;
     position: absolute;
-    top: 650px;
-    display: flex;
-    background-color: hsl(0, 0%, 100%);
-    width: 100%;
+    top: 670px;
+    /* bottom: 0; */
+    /*  display: flex;
+     background-color: $White;
+     width: 100%;* */
   }
   div.steps-content {
     padding: 0 1.1em 1.1em;
@@ -471,6 +510,8 @@ div.success-container p.thanks-message {
    } */
   div.wrapper {
     border-radius: none;
+    background-color: hsl(217, 100%, 97%);
+    /* height: 650px; */
     display: block;
     padding: 0 0 2em;
   }
@@ -495,19 +536,21 @@ div.success-container p.thanks-message {
     display: none;
   }
   div.step1 div.next-wrapper {
-    width: 100%;
     position: absolute;
-    padding: 0 0 10px;
-    top: 685px;
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    bottom: 0;
   }
   div.step1 button.next-step {
     position: absolute;
-    bottom: 0;
     right: 5%;
     margin: 0;
-    margin-top: 0.7em;
-    margin-left: auto;
-    margin-bottom: 0.7em;
+  }
+  div.step1 button.next-step {
+    /*  margin-bottom: 0.7em; */
   }
   div.step-2 div.steps-content div.user-plans {
     grid-template-columns: 1fr;
@@ -554,6 +597,19 @@ div.success-container p.thanks-message {
   }
   div.step-three div.nav-buttons {
     margin: 0;
+  }
+  div.step-four div.selected-plans {
+    padding: 1em;
+    width: 99%;
+  }
+  div.step-four div.selected-plans div.chosen-container {
+    gap: 15px;
+  }
+  div.step-four div.selected-plans div.chosen-container div {
+    padding-bottom: 1em;
+  }
+  div.step-four div.selected-plans div:not(.chosen-container) {
+    gap: 15px;
   }
   div.success-container {
     padding: 4em 0;
