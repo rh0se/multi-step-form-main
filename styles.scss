@@ -531,7 +531,14 @@ div.success-container {
   }
 
    div.nav-buttons  {
-   
+    margin: 0;
+    padding: 1em 1em;
+    position: absolute;
+    top: 670px;
+    width: 100%;
+    background-color: $White;
+    height: 5em;
+    align-items: center;
     /*  margin: 0;
     padding: 0 1em 1em;
     position: absolute;
@@ -608,7 +615,7 @@ div.success-container {
       display: flex;
       align-items: center;
       bottom: 0;
-      
+      top: 600px;
     }
     button.next-step {
       position: absolute;
