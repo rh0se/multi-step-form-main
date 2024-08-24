@@ -255,6 +255,11 @@ div.step1 button.next-step {
   margin: 6.5em 0 0 22em;
 }
 
+.selected {
+  background-color: hsl(217, 100%, 97%) !important;
+  border: 1px solid hsl(213, 96%, 18%) !important;
+}
+
 div.main-content {
   color: hsl(213, 96%, 18%);
 }
@@ -265,17 +270,21 @@ div.step-2 div.steps-content div.user-plans {
   grid-template-columns: repeat(3, 140px);
   gap: 1em;
 }
-div.step-2 div.steps-content div.user-plans article.plans {
+div.step-2 div.steps-content div.user-plans button.plans {
+  cursor: pointer;
   border-radius: 5px;
   /* width: 150px; */
+  text-align: left;
+  /* height: 117px; */
+  background-color: inherit;
   padding: 1.5em 1em 1.1em;
   border: 1px solid hsl(229, 24%, 87%);
   line-height: 1.2;
 }
-div.step-2 div.steps-content div.user-plans article.plans h2.plan-heading {
+div.step-2 div.steps-content div.user-plans button.plans h2.plan-heading {
   margin-top: 2.5em;
 }
-div.step-2 div.steps-content div.user-plans article.plans p {
+div.step-2 div.steps-content div.user-plans button.plans p {
   color: hsl(231, 11%, 63%);
   font-size: 0.9em;
   font-weight: 500;
@@ -299,6 +308,11 @@ div.step-2 div.steps-content div.plan-frequency {
 }
 div.step-2 div.steps-content div.plan-frequency span.active {
   color: hsl(213, 96%, 18%);
+}
+
+article.checked {
+  background-color: hsl(217, 100%, 97%) !important;
+  border: 1.5px solid hsl(213, 96%, 18%) !important;
 }
 
 div.step-three div.steps-content div.add-on-container {
@@ -380,6 +394,9 @@ div.step-three div.nav-buttons {
 
 div.step-four div.selected-plans {
   background-color: hsl(217, 100%, 97%);
+}
+div.step-four div.selected-plans div.chosen-container {
+  display: flex;
 }
 div.step-four p.total {
   margin-top: 2em;
@@ -496,20 +513,20 @@ div.success-container p.thanks-message {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 80px);
   }
-  div.step-2 div.steps-content div.user-plans article.plans {
+  div.step-2 div.steps-content div.user-plans button.plans {
     padding: 1em;
     display: flex;
     gap: 20px;
     align-items: center;
   }
-  div.step-2 div.steps-content div.user-plans article.plans img {
+  div.step-2 div.steps-content div.user-plans button.plans img {
     height: 40px;
     width: 40px;
   }
-  div.step-2 div.steps-content div.user-plans article.plans h2.plan-heading {
+  div.step-2 div.steps-content div.user-plans button.plans h2.plan-heading {
     margin-top: 0;
   }
-  div.step-2 div.steps-content div.user-plans article.plans p {
+  div.step-2 div.steps-content div.user-plans button.plans p {
     color: hsl(231, 11%, 63%);
     font-size: 0.9em;
     font-weight: 500;

@@ -266,6 +266,11 @@ div.step1 {
   }
 }
 
+.selected {
+  background-color: $Magnolia !important;
+  border: 1px solid $MarineBlue !important;
+}
+
 div.main-content {
   color: $MarineBlue;
 }
@@ -277,10 +282,16 @@ div.step-2 {
       display: grid;
   
       grid-template-columns: repeat(3, 140px);
+      
       gap: 1em;
-      article.plans {
+      
+      button.plans {
+        cursor: pointer;
         border-radius: 5px;
         /* width: 150px; */
+        text-align: left;
+        /* height: 117px; */
+        background-color: inherit;
         padding: 1.5em 1em 1.1em;
         border: 1px solid $LightGray;
         line-height: 1.2;
@@ -318,10 +329,16 @@ div.step-2 {
   
 }
 
+article.checked {
+  background-color: $Magnolia !important;
+  border: 1.5px solid $MarineBlue !important;
+}
+
 div.step-three {
  div.steps-content {
   div.add-on-container {
     margin-top: 2.5em;
+    
     article {
       border: 1px solid $LightGray;
       padding: 1em 1.5em;
@@ -413,6 +430,9 @@ div.step-three {
 div.step-four {
   div.selected-plans {
     background-color: $Magnolia;
+    div.chosen-container {
+      display: flex;
+    }
   }
   p.total {
     margin-top: 2em;
@@ -556,7 +576,8 @@ div.success-container {
       div.user-plans {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 80px);
-        article.plans {
+        
+        button.plans {
           padding: 1em;
           display: flex;
           gap: 20px;
