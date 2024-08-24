@@ -429,10 +429,52 @@ div.step-three {
 
 div.step-four {
   div.selected-plans {
+    margin-top: 2em;
+    padding: 1em;
+    width: 452px;
     background-color: $Magnolia;
+    border-radius: 10px;
+    
+    div:not(.chosen-container) {
+      margin-top: 1em;
+      color: $CoolGray;
+      display: flex;
+      align-items: center;
+      gap: 59%;
+      p.summary-price {
+        color: $MarineBlue;
+      }
+    }
     div.chosen-container {
       display: flex;
+      gap: 59%;
+      align-items: center;
+      border-bottom: 1px solid $LightGray;
+      p.summary-price {
+        color: $MarineBlue;
+      }
+      div {
+        margin: 0;
+        color: $MarineBlue;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        padding-bottom: 1em;
+        button.change-button {
+          display: block;
+          border: none;
+          text-decoration: underline;
+          background-color: $Magnolia;
+          color: $CoolGray;
+
+        }
+      }
+      
     }
+  }
+  p.summary-price {
+    justify-self: flex-end;
   }
   p.total {
     margin-top: 2em;
@@ -458,7 +500,9 @@ div.success-container {
 }
 @media screen and (width < 768px) {
   body {
-    background-color: $White;
+
+    background-color: $Magnolia;
+    
   }
   main {
     border-radius: 0;
@@ -469,11 +513,11 @@ div.success-container {
     div.container {
       position: relative;
       border-radius: 0;
-      background-color: $Magnolia;
+      overflow: auto;
       padding: 0 0 2em;
       width: 100%;
-     min-height: 100vh; 
-     height: 632px;
+     /* s */
+      background-color: $Magnolia;
     }
   }
 
@@ -487,13 +531,15 @@ div.success-container {
   }
 
    div.nav-buttons  {
-    margin: 0;
+   
+    /*  margin: 0;
     padding: 0 1em 1em;
     position: absolute;
-    top: 650px;
-    display: flex;
+    top: 670px;
+    /* bottom: 0; */
+   /*  display: flex;
     background-color: $White;
-    width: 100%;
+    width: 100%;* */
    }
   
 
@@ -518,7 +564,8 @@ div.success-container {
   
   div.wrapper {
     border-radius: none;
-    
+    background-color: $Magnolia; 
+    /* height: 650px; */
     display: block;
     padding: 0 0 2em;
   }
@@ -545,9 +592,7 @@ div.success-container {
       }
     }
   }
-  button.next-step {
-
-  }
+  
 
   div.step1 {
     div.steps-content {
@@ -555,19 +600,25 @@ div.success-container {
        
     }
     div.next-wrapper {
+
+     position: absolute;
+      background-color: $White;
       width: 100%;
-      position: absolute;
-      padding: 0 0 10px;
-      top: 685px
+      height: 5em;
+      display: flex;
+      align-items: center;
+      bottom: 0;
+      
     }
     button.next-step {
-        position: absolute;
-        bottom: 0;
-        right: 5%;
-        margin: 0;
-        margin-top: 0.7em;
-        margin-left: auto;
-        margin-bottom: 0.7em;
+      position: absolute;
+      right: 5%;
+      margin: 0;
+    }
+   
+    button.next-step {
+        
+       /*  margin-bottom: 0.7em; */
     }
   }
 
@@ -631,6 +682,32 @@ div.success-container {
       margin: 0;
     }
   }
+  div.step-four {
+    div.selected-plans {
+      padding: 1em;
+      width: 99%;
+      
+      div.chosen-container {
+        gap: 15px;
+        div {
+          
+          padding-bottom: 1em;
+          button.change-button {
+            
+  
+          }
+        }
+        
+      }
+      div:not(.chosen-container) {
+        gap: 15px;
+        p.summary-price {
+          
+        }
+      }
+    }
+   
+  }  
 
 
 
@@ -642,6 +719,7 @@ div.success-container {
   }
   
 }
+
 .inactive {
   display: none;
 }
