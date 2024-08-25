@@ -252,7 +252,7 @@ div.step1 div.steps-content form div input::placeholder {
   font-weight: 500;
 }
 div.step1 button.next-step {
-  margin: 6.5em 0 0 22em;
+  margin: 6em 0 0 22em;
 }
 
 .selected {
@@ -450,6 +450,10 @@ div.step-four div.selected-plans div.chosen-container div.chosen-wrapper button.
   text-decoration: underline;
   background-color: hsl(217, 100%, 97%);
   color: hsl(231, 11%, 63%);
+}
+div.step-four div.selected-plans div.chosen-container div.chosen-wrapper button.change-button:hover {
+  color: hsl(243, 100%, 62%);
+  font-weight: 700;
 }
 div.step-four p.summary-price {
   justify-self: flex-end;

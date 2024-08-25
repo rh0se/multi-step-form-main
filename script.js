@@ -14,6 +14,10 @@ const addOnCheckbox = [...document.getElementsByClassName("add-on-checkbox")];
 const summary = document.getElementById('summary');
 const totalAmount = document.getElementById('total-amount');
 const selectedFrequency = document.getElementById('selected-frequency');
+const nameError = document.getElementById('name-error');
+const emailError = document.getElementById('email-error');
+const phoneError = document.getElementById('phone-error');
+const selectionError = document.getElementById('selection-error');
 let isMonthly = true;
 
 const planOptions = [
@@ -111,11 +115,11 @@ class SelectionSummary {
         
         if (isMonthly) {
             summary.innerHTML = ``;
-            summary.innerHTML = `<div class="chosen-container"><div class="chosen-wrapper"><p>${Name}(Monthly)</p><button type="button" class="change-button">Change</button></div><p class="summary-price">\$${price}/mo</p></div><div id="summary-addons"></div>`;
+            summary.innerHTML = `<div class="chosen-container"><div class="chosen-wrapper"><p>${Name}(Monthly)</p><button type="button" class="change-button" onclick="moveToStepTwo()">Change</button></div><p class="summary-price">\$${price}/mo</p></div><div id="summary-addons"></div>`;
         } else {
             summary.innerHTML = ``;
             price *= 10;
-            summary.innerHTML = `<div class="chosen-container"><div class="chosen-wrapper"><p>${Name}(Monthly)</p><button type="button" class="change-button">Change</button></div><p class="summary-price">\$${price}/yr</p></div><div id="summary-addons"></div>`;
+            summary.innerHTML = `<div class="chosen-container"><div class="chosen-wrapper"><p>${Name}(Monthly)</p><button type="button" class="change-button" onclick="moveToStepTwo()">Change</button></div><p class="summary-price">\$${price}/yr</p></div><div id="summary-addons"></div>`;
         }
         this.total += price;
         console.log(this.total)
@@ -124,6 +128,7 @@ class SelectionSummary {
         catch {
             currentStepIndex = 1;
             showCurrentStep();
+            selectionError.innerText ="Please make a selection, Before moving to the next step";
         }
         
         /* this.userPlans.push(product); */
@@ -145,20 +150,27 @@ class SelectionSummary {
 
     addAddOn(isMonthly, products) {
         const summaryAddOn = document.getElementById("summary-addons");
-        this.total = 0;
+        
         
         try {
+            this.total = 0;
+            if (isMonthly) {
+                this.total += Number(this.getPlan());
+            } else {
+                this.total += Number(this.getPlan() ) * 10;
+            }
             summaryAddOn.innerHTML = "";
+            
             this.getAddon().forEach(addOn => {
                 const product = products.find(item => item.id === addOn.id);
                 console.log(product);
                 var { price, Name } = product;
                 
                 if (isMonthly) {
-                    this.total += Number(this.getPlan());
+                    
                     summaryAddOn.innerHTML += `<div><p>${Name}</p><p class="summary-price">\$${price}/mo</p></div>`;
                 } else {
-                    this.total += Number(this.getPlan() ) * 10;
+    
                     price *= 10;
                     summaryAddOn.innerHTML += `<div><p>${Name}</p><p class="summary-price">\$${price}/yr</p></div>`;
                 }
@@ -180,7 +192,29 @@ console.log(currentStepIndex);
 const Selection = new SelectionSummary();
 
 
+const moveToStepTwo = () => {
+    currentStepIndex = 1;
+    showCurrentStep();
+}
+
 function validateStepOne() {
+    console.log(userName.checkValidity());
+    if (!(userName.checkValidity())) {
+        nameError.innerText = userName.validationMessage;
+        userName.style.border = "1px solid red";
+        currentStepIndex = 0;
+        showCurrentStep();
+    } else if (!(email.checkValidity())) {
+        emailError.innerText = email.validationMessage;
+        currentStepIndex = 0;
+        email.style.border = "1px solid red";
+        showCurrentStep();
+    } else if (!(phoneNumber.checkValidity())) {
+        phoneError.innerText = phoneNumber.validationMessage;
+        phoneNumber.style.border = "1px solid red";
+        currentStepIndex = 0;
+        showCurrentStep();
+    }
     /* tovalidate form */
 }
 
@@ -229,6 +263,9 @@ nextButton.forEach(step => {
         console.log(currentStepIndex);
         currentStepIndex += 1;
         console.log(currentStepIndex);
+        if (currentStepIndex === 1) {
+            validateStepOne();
+        }
         if (currentStepIndex === 2) {
             Selection.addPlan(isMonthly, planOptions);
         }
