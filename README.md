@@ -36,14 +36,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./Screenshot(2).png)
 
-*
+
 
 ### Links
 
-- Solution: [solution](https://your-solution-url.com)
-- Live Site: [live site](https://your-live-site-url.com)
+- Solution: [solution](https://github.com/rh0se/multi-step-form-main)
+- Live Site: [live site](https://rh0se.github.io/multi-step-form-main/)
 
 ## My process
 
