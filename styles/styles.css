@@ -205,13 +205,26 @@ div.nav-buttons {
   align-items: center;
 }
 div.nav-buttons button.back-button {
+  cursor: pointer;
   border: none;
   background-color: hsl(0, 0%, 100%);
   color: hsl(231, 11%, 63%);
   text-transform: capitalize;
 }
+div.nav-buttons button.back-button:hover {
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+}
 div.nav-buttons button.next-button {
   margin: 0 0 0;
+}
+
+button.next-step:hover {
+  opacity: 0.8;
+}
+
+button.next-step:nth-last-of-type():hover {
+  opacity: 0.2;
 }
 
 button.back-button {
@@ -234,7 +247,7 @@ div.step1 div.steps-content form div label {
   font-weight: 500;
 }
 div.step1 div.steps-content form div input {
-  color: inherit;
+  color: hsl(213, 96%, 18%);
   font-weight: 700;
   border-radius: 7px;
   border: 1px hsl(229, 24%, 87%) solid;
@@ -283,15 +296,22 @@ div.step-2 div.steps-content div.user-plans button.plans {
   background-color: inherit;
   padding: 1.5em 1em 1.1em;
   border: 1px solid hsl(229, 24%, 87%);
-  line-height: 1.2;
+  line-height: 1.4;
 }
 div.step-2 div.steps-content div.user-plans button.plans h2.plan-heading {
   margin-top: 2.5em;
+  color: hsl(213, 96%, 18%);
 }
 div.step-2 div.steps-content div.user-plans button.plans p {
   color: hsl(231, 11%, 63%);
   font-size: 0.9em;
   font-weight: 500;
+}
+div.step-2 div.steps-content div.user-plans button.plans p.yearly-benefit {
+  color: hsl(213, 96%, 18%);
+  font-size: 0.7em;
+  font-weight: 700;
+  margin: 1px 0 0 0;
 }
 div.step-2 div.steps-content div.plan-frequency {
   border-radius: 5px;
@@ -309,6 +329,10 @@ div.step-2 div.steps-content div.plan-frequency {
   /* img {
     width: 100px;
   } */
+}
+div.step-2 div.steps-content div.plan-frequency button {
+  border: none;
+  background-color: inherit;
 }
 div.step-2 div.steps-content div.plan-frequency span.active {
   color: hsl(213, 96%, 18%);

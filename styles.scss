@@ -214,14 +214,27 @@ div.nav-buttons {
   justify-content: space-between;
   align-items: center;
   button.back-button {
+    cursor: pointer;
     border: none;
     background-color: $White;
     color: $CoolGray;
     text-transform: capitalize;
   }
+  button.back-button:hover {
+    color: $MarineBlue;
+    font-weight: 500;
+  }
   button.next-button {
     margin: 0 0 0;
   }
+}
+
+button.next-step:hover {
+  opacity: 0.8;
+}
+
+button.next-step:nth-last-of-type():hover {
+  opacity: 0.2;
 }
 
 button.back-button {
@@ -244,7 +257,7 @@ div.step1 {
           font-weight: 500;
         }
         input {
-          color: inherit;
+          color: $MarineBlue;
           font-weight: 700;
           border-radius: 7px;
           border: 1px $LightGray solid;
@@ -298,14 +311,21 @@ div.step-2 {
         background-color: inherit;
         padding: 1.5em 1em 1.1em;
         border: 1px solid $LightGray;
-        line-height: 1.2;
+        line-height: 1.4;
         h2.plan-heading {
           margin-top: 2.5em;
+          color: $MarineBlue;
         }
         p {
           color: $CoolGray;
           font-size: 0.9em;
           font-weight: 500;
+        }
+        p.yearly-benefit {
+          color: $MarineBlue;
+          font-size: 0.7em;
+          font-weight: 700;
+          margin: 1px 0 0 0;
         }
       }
     }
@@ -322,6 +342,10 @@ div.step-2 {
       color: $LightGray;
       font-weight: 700;
       text-transform: capitalize;
+      button {
+        border: none;
+        background-color: inherit;
+      }
       /* img {
         width: 100px;
       } */

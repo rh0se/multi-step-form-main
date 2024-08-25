@@ -6,6 +6,7 @@ const plans = [...document.getElementsByClassName("plans")];
 const addOn = [...document.getElementsByClassName("add-on")];
 const planPricing = [...document.getElementsByClassName("plan-pricing")];
 const addOnPricing = [...document.getElementsByClassName("add-on-pricing")];
+let yearlyBenefit = [...document.getElementsByClassName("yearly-benefit")];
 const userName = document.getElementById("user-name");
 const email = document.getElementById('email');
 const phoneNumber = document.getElementById('phone-number');
@@ -292,9 +293,14 @@ frequencyToggle.addEventListener("click", (event) => {
     console.log(event.target.classList)
     if (isMonthly === true) {
         isMonthly = false;
+        yearlyBenefit.forEach(benefit => {
+            benefit.classList.remove("inactive");
+        });
 
     } else {
-
+        yearlyBenefit.forEach(benefit => {
+            benefit.classList.add("inactive");
+        });
         isMonthly = true;
     }
     frequencyToggle.classList.toggle("fa-flip-horizontal");
