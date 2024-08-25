@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](screenshot.png)
+![](screenshot%(2).png)
 
 
 ### Links
