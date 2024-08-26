@@ -37,7 +37,10 @@ Users should be able to:
 ### Screenshot
 
 ![](screenshot.png)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 26fb853a3acae83288e0c8e2b22a10ed0e53c74a
 
 
 ### Links
